@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Mi Tienda de Ropa</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        /* Navegación */
+        header {
+            background: #4a0f55;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #a0328c;
+        }
+
+        /* Sección Hero */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #4a0f55, #a0328c);
+            color: white;
+        }
+
+        /* Contenedor de Productos */
+        .products {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scrollbar-width: none;
+        }
+
+        .product {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 200px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .boton-comprar {
+            display: inline-block;
+            background: #a0328c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boton-comprar:hover {
+            background: #4a0f55;
+        }
+
+        /* Pie de Página */
+        footer {
+            background: #4a0f55;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+   <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>¡Bienvenido a nuestra Tienda de Moda!</h1>
+        <p>Las mejores tendencias a precios increíbles</p>
+    </section>
+
+    <section class="products">
+        <h2>Productos Populares</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="fotos/foto01.png" alt="Vestido de Verano">
+                <h3>Vestido de Verano</h3>
+                <p>$25.99</p>
+                <button class="boton-comprar" onclick="agregarAlCarrito('Vestido de Verano', 25.99)">Agregar al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="fotos/producto1.png" alt="Camiseta Casual">
+                <h3>vestido</h3>
+                <p>$15.99</p>
+                <button class="boton-comprar" onclick="agregarAlCarrito('Camiseta Casual', 15.99)">Agregar al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="fotos/foto04.png" alt="Pantalones de Jean">
+                <h3>camisa casual</h3>
+                <p>$40.00</p>
+                <button class="boton-comprar" onclick="agregarAlCarrito('Pantalones de Jean', 40.00)">Agregar al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="fotos/foto05.png" alt="Chaqueta de Invierno">
+                <h3>pantalones jean</h3>
+                <p>$55.00</p>
+                <button class="boton-comprar" onclick="agregarAlCarrito('Chaqueta de Invierno', 55.00)">Agregar al carrito</button>
+            </div>
+
+            <div class="product">
+                <img src="fotos/foto06.png" alt="Bolsas">
+                <h3>chaqueta de verano </h3>
+                <p>$99.00</p>
+                <button class="boton-comprar" onclick="agregarAlCarrito('Bolsas', 99.00)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda de Ropa</p>
+    </footer>
+
+    <script>
+        function agregarAlCarrito(producto, precio) {
+            alert(`"${producto}" ha sido agregado al carrito por $${precio}.`);
+        }
+    </script>
+
+</body>
+</html>
