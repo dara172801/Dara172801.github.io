@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías de la Tienda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        h1 {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: white;
+            padding: 20px;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contenedor Principal */
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* Estilos de las Categorías */
+        .categoria {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .categoria:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-color: #007bff;
+        }
+
+        /* Imagen de la Categoría */
+        .categoria img {
+            width: 100%;
+            max-width: 160px;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .categoria:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Texto de la Categoría */
+        .categoria h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            font-size: 14px;
+        }
+
+    </style>
+    <script>
+        function redirigir(categoria) {
+            localStorage.setItem("ultimaCategoria", categoria);
+            window.location.href = categoria + ".html";
+        }
+
+        // Mostrar mensaje de última visita
+        window.onload = function() {
+            const ultimaCategoria = localStorage.getItem("ultimaCategoria");
+            if (ultimaCategoria) {
+                alert("Última categoría visitada: " + ultimaCategoria);
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Categorías de la Tienda</h1>
+
+    <div class="contenedor">
+        <div class="categoria" onclick="redirigir('ropa')" role="button">
+            <img src="fotos/ca1.jpg" alt="Categoría de Ropa">
+            <h3>Ropa</h3>
+        </div>
+
+        <div class="categoria" onclick="redirigir('juguetes')" role="button">
+            <img src="fotos/ca2.jpg" alt="Categoría de Juguetes">
+            <h3>Juguetes</h3>
+        </div>
+
+        <div class="categoria" onclick="redirigir('hogar')" role="button">
+            <img src="fotos/ca3.jpg" alt="Categoría de Hogar">
+            <h3>Hogar</h3>
+        </div>
+
+        <div class="categoria" onclick="redirigir('electronicos')" role="button">
+            <img src="fotos/ca4.jpg" alt="Categoría de Electrónicos">
+            <h3>Electrónicos</h3>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Tienda Online | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>

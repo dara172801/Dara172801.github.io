@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Ropa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Menú de Navegación */
+        nav {
+            background: #007bff;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Carrito de Compras */
+        .carrito {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Contenedor Principal */
+        .contenedor {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Estilos de cada producto */
+        .producto {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Imagen del producto */
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Texto del producto */
+        .producto p {
+            font-size: 1.1em;
+            color: #333;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* Botón */
+        .boton {
+            display: block;
+            margin: 5px auto;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton-carrito {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .boton-carrito:hover {
+            background-color: #e68900;
+        }
+
+        .boton-comprar {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .boton-comprar:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>👕 Productos de Ropa 👕</nav>
+
+    <div class="carrito">🛒 Carrito: <span id="cantidadCarrito">0</span> productos</div>
+
+    <div class="contenedor">
+        <div class="producto">
+            <img src="fotos/ropa1.jpg" alt="Conjunto Mujer">
+            <p>Conjunto Mujer - $20</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa2.jpg" alt="Conjunto Urbano">
+            <p>Conjunto Urbano - $30</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa3.jpg" alt="Pantalón">
+            <p>Pantalón - $20</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa4.jpg" alt="Conjunto Blanco">
+            <p>Conjunto Blanco - $30</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa5.jpg" alt="Conjunto 6 Piezas">
+            <p>Conjunto 6 Piezas - $20</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa6.jpg" alt="Conjunto 8 Piezas">
+            <p>Conjunto 8 Piezas - $30</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa7.jpg" alt="Falda">
+            <p>Falda - $20</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ropa8.jpg" alt="Conjunto 5 Piezas">
+            <p>Conjunto de 5 Piezas - $30</p>
+            <button class="boton boton-carrito" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            <button class="boton boton-comprar">💳 Comprar Ahora</button>
+        </div>
+    </div>
+
+    <script>
+        let cantidad = 0;
+
+        function agregarAlCarrito() {
+            cantidad++;
+            document.getElementById("cantidadCarrito").innerText = cantidad;
+        }
+    </script>
+
+</body>
+</html>

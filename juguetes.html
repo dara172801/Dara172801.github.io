@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetes en Oferta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Menú de Navegación */
+        nav {
+            background: #ff6a00;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Estilos de cada producto */
+        .producto {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Imagen del producto */
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Texto del producto */
+        .producto p {
+            font-size: 1.1em;
+            color: #333;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* Botón */
+        .boton {
+            background-color: #ff6a00;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #d45a00;
+        }
+
+        /* Carrito de Compras */
+        .carrito {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>🎉 Juguetes en Oferta 🎉</nav>
+
+    <div class="carrito">🛒 Carrito: <span id="cantidadCarrito">0</span> productos</div>
+
+    <div class="container">
+
+        <div class="producto">
+            <img src="fotos/ju1.png" alt="Rompecabezas">
+            <p>Rompecabezas - $20</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju2.png" alt="Impresora">
+            <p>Impresora - $30</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju3.png" alt="Barbie">
+            <p>Barbie - $20</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju4.png" alt="Moto">
+            <p>Moto - $30</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju5.png" alt="Computadora">
+            <p>Computadora - $20</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju6.png" alt="Libro">
+            <p>Libro - $30</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju7.png" alt="Carro Boost">
+            <p>Carro Boost - $20</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju8.png" alt="Carro">
+            <p>Carro - $30</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju9.png" alt="Piscina">
+            <p>Piscina - $20</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ju10.png" alt="Borrador">
+            <p>Borrador - $30</p>
+            <button class="boton" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+        </div>
+
+    </div>
+
+    <script>
+        let cantidad = 0;
+
+        function agregarAlCarrito() {
+            cantidad++;
+            document.getElementById("cantidadCarrito").innerText = cantidad;
+        }
+    </script>
+
+</body>
+</html>

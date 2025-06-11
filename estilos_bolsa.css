@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.bolsa {
+    position: relative;
+    width: 120px;
+    height: 150px;
+}
+
+.cuerpo {
+    width: 100%;
+    height: 100%;
+    background-color: #FFC0CB; /* Rosa claro */
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.asa {
+    width: 20px;
+    height: 40px;
+    background-color: #CD5C5C; /* Rojo indio */
+    position: absolute;
+    top: -15px;
+    border-radius: 5px;
+}
+
+.asa-izquierda {
+    left: 20px;
+}
+
+.asa-derecha {
+    right: 20px;
+}
+
+.corazon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #FF69B4; /* Rosa fuerte */
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.corazon::before,
+.corazon::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #FF69B4; /* Rosa fuerte */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.corazon::before {
+    top: -20px;
+    left: 0;
+}
+
+.corazon::after {
+    left: 20px;
+    top: 0;
+}
+  .contenedor-bolsa-texto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .texto-debajo-bolsa {
+            margin-top: 10px; /* Espacio entre la bolsa y el texto */
+            font-size: 1.2em; /* Tamaño de la fuente del texto */
+            text-align: center; /* Centrar el texto */
+        }
+        .texto-debajo-bolsa {
+    margin-top: 10px;
+    font-size: 1.4em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Ejemplo de otra fuente de Google Fonts */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #333; /* Un color de texto más suave que el negro puro */
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Estilos de cada producto */
+        .producto {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 15px;
+            margin: 15px;
+            width: 240px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Imagen del producto */
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Título del producto */
+        .producto h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Precio */
+        .producto p {
+            font-size: 1em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        /* Botones */
+        .botones {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .boton {
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 48%;
+            transition: background 0.3s;
+        }
+
+        .boton-carrito {
+            background-color: #f0c14b;
+            color: #333;
+        }
+
+        .boton-carrito:hover {
+            background-color: #d4a12d;
+        }
+
+        .boton-comprar {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .boton-comprar:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>🔥 Ofertas Especiales 🔥</header>
+
+    <div class="container">
+        <div class="producto">
+            <img src="fotos/ofe1.png" alt="Vestido verde">
+            <h2>Vestido Verde</h2>
+            <p>Precio: $100</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe2.png" alt="Pantalón">
+            <h2>Pantalón</h2>
+            <p>Precio: $150</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe3.png" alt="Vestido de cuello">
+            <h2>Vestido de Cuello</h2>
+            <p>Precio: $200</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe4.png" alt="Perfume de mujer">
+            <h2>Perfume de Mujer</h2>
+            <p>Precio: $250</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe5.png" alt="Vestido de 15 años">
+            <h2>Vestido de 15 Años</h2>
+            <p>Precio: $300</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe6.png" alt="Vestido pegado">
+            <h2>Vestido Pegado</h2>
+            <p>Precio: $350</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="fotos/ofe7.png" alt="Perfume para hombres">
+            <h2>Perfume para Hombres</h2>
+            <p>Precio: $100</p>
+            <div class="botones">
+                <button class="boton boton-carrito">🛒 Agregar</button>
+                <button class="boton boton-comprar">💳 Comprar</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
